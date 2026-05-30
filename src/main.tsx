@@ -3,15 +3,9 @@ import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-// Is wrapper ko hum blank rakhenge taaki website crash na ho
-const Web3Wrapper = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
-};
-
+// Web3Wrapper ko bypass karo taaki external scripts chal sakein
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Web3Wrapper>
       <App />
-    </Web3Wrapper>
   </StrictMode>,
 );
